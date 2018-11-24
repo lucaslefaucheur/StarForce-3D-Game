@@ -1,0 +1,14 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerBullet : MonoBehaviour {
+    
+    public int speed;
+
+	// Update is called once per frame
+	void Update () {
+        transform.Translate(0, speed * Time.deltaTime, 0); // set the movement of the player's bolt
+        Destroy(gameObject, 6); // destroy the player's bolt after 6 seconds 
+    }
+}
